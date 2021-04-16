@@ -5,8 +5,8 @@
     <meta name="description" content="Спринт-1">
     <meta name="keywords" content="sptint, study, yandex">
     <meta name="author" content="Андрей Почестнев">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet"  href="./styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Научиться учиться</title>
 </head>
@@ -14,15 +14,9 @@
 <div class="page">
     <header class="header">
         <div class="logo logo_place_header"></div>
-        <!-- Надо исправить:
-            Класс не соответсвует БЭМ, значение модификатора должно отделяться одним подчеркиванием
-            Придерживайтесь схемы: block block_mod_value
-            (прошлый вариант,в первой работе, классов был верный)+
-        -->
         <h1 class="header__title">Научиться учиться</h1>
         <p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?
             <a class="header__link link" href="#">Узнать→</a>
-            <!-- Можно лучше: для спец символов нужно использовать html - мнемоники (https://ru.wikipedia.org/wiki/Мнемоники_в_HTML) -->
         </p>
         <img class="header__main-illustration" src="./images/two_again.png" alt="Опять двойка">
         <div class="header__square-pic"></div>
@@ -41,7 +35,6 @@
                     <p class="two-columns__paragraph">
                         Конкретные техники и упражнения помогают изменить подход к обучению, сделать его эффективным и захватывающим. Эти же техники применяются на примере обучения в Практикуме.
                     </p>
-                    <!-- Надо исправить: тут должно быть три параграфа, причем оформление у них одинаковое. CSS - класс у этих параграфов тоже должен быть одинаковый. +-->
                 </div>
             </div>
         </section>
@@ -81,7 +74,6 @@
         <section class="video">
             <h2 class="section-title">Видео нa TED</h2>
             <h3 class="section-subtitle">Для тех, кто любит прокрастинировать</h3>
-            <!-- Можно лучше: Подзаголовки не рекомендуется делать элементами h.(section-title лучше подойдет <p>)-->
             <div class="video__iframes">
                 <iframe class="video__iframe"  src="https://www.youtube.com/embed/5MgBikgcWnY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>               
                 <iframe class="video__iframe"  src="https://www.youtube.com/embed/arj7oStGLkU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -101,16 +93,13 @@
         <section class="feinman">
             <h2 class="feinman__title">Метод Фейнмана</h2>
             <h3 class="feinman__subtitle">Выучить и не забыть.</h3>
-            <!-- Можно лучше: Подзаголовки не рекомендуется делать элементами h.(feinman__subtitle лучше подойдет <p>)-->
             <a class="feinman__link link" href="#">Подробнее→</a>
-            <!-- Можно лучше: для спец символов нужно использовать html - мнемоники (https://ru.wikipedia.org/wiki/Мнемоники_в_HTML) -->
             <img class="feinman__img" src="./images/feinman.png" alt="Фейнман">
 
         </section>
         <section class="digits">
             <h2 class="section-title">Цифры и факты</h2>
             <h3 class="section-subtitle">Про учёбу и мозг</h3>
-            <!-- Можно лучше: Подзаголовки не рекомендуется делать элементами h.(section-title лучше подойдет <p>)-->
             <div class="table">
                 <div class="table__cell">
                     <h3 class="table__heading">86 миллиардов</h3>
@@ -154,17 +143,12 @@
                 <h2 class="khan__title">Весь мир — школа</h2>
                 <p class="khan__qoute">Страсть и новаторство Сала Хана меняют процесс обучения миллионов студентов по всему миру. Книгу «Весь мир — школа» нужно прочитать всем, кто занимается образованием — так учащиеся повсюду смогут получить навыки и знания, которые приносят успех в школе, карьере и жизни.
                 </p>
-                <!-- Можно лучше: 
-                    По смыслу это цитата, так что тут лучше использовать элемент blockquote.
-                    Подробнее можно почитать тут: https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote
-                -->
                 <h4 class="khan__quote-author">Джордж Лукас
                 </h4>
                 <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
                 <div class="khan__book-container">
                     <img class="khan__book-pic" src="images/book.jpg" alt="КУПИ КНИГУ">
                     <a href="https://www.ozon.ru/context/detail/id/31700837/" target="_blank" class="khan__buy-link link">Купить книгу→</a>
-                    <!-- Можно лучше: для спец символов нужно использовать html - мнемоники (https://ru.wikipedia.org/wiki/Мнемоники_в_HTML) -->
                 </div>
             </div>
         </section>
@@ -172,11 +156,7 @@
         <section class="kaufman">
             <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
             <h3 class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</h3>
-            <!-- Можно лучше: Подзаголовки не рекомендуется делать элементами h.(section-title лучше подойдет <p>)-->
             <div class="table table_theme_dark">
-                <!-- Надо исправить:
-                    По всей таблице: у table__heading открывающий и закрывабщий теги разные+
-                -->
                 <div class="table__cell table__cell_theme_dark">
                     <h4 class="table__heading table__heading_theme_dark">1</h4>
                     <p class="table__text table__text_theme_dark">Выберите привлекательный проект.</p>
@@ -223,15 +203,11 @@
         <section class="resources">
             <h2 class="section-title section-title_card">Полезные ресурсы</h2>
             <h3 class="section-subtitle">Больше материалов о техниках и лайфхаках обучения</h3>
-            <!-- Можно лучше: Подзаголовки не рекомендуется делать элементами h.(section-title лучше подойдет <p>)-->
             <ul class="resources__logo-zone">
                 <li class="resources__logo-name"><a href="https://arzamas.academy/" target="_blank"><img class="resources__logo" src="images/logo/arzamas.svg" alt="Арзамас"></a></li>
                 <li class="resources__logo-name"><a href="https://nplus1.ru/" target="_blank"><img class="resources__logo" src="images/logo/n1.svg" alt="N+1"></a></li>
                 <li class="resources__logo-name"><a href="https://polka.academy/" target="_blank"><img class="resources__logo" src="images/logo/polka.svg" alt="Полка"></a></li>
                 <li class="resources__logo-name"><a href="https://strelka.com/ru/bar" target="_blank"><img class="resources__logo" src="images/logo/strelka.svg" alt="Стрелка"></a></li>
-                <!-- Надо исправить:
-                    Зачем вам модификатор resources__logo_link? поместите все стили в resources__logo+
-                -->
             </ul>
         </section>
     </main>
@@ -239,13 +215,7 @@
         <div class="footer__columns">
             <div class="footer__column footer__column_content_copyright">
                 <div class=" logo logo_place_footer"></div>
-                <!-- Надо исправить:
-                    Класс не соответсвует БЭМ, значение модификатора должно отделяться одним подчеркиванием
-                    Придерживайтесь схемы: block block_mod_value
-                    (прошлый вариант классов был верный)+
-                -->
                 <p class="footer__author">© 2019. Андрей Почестнев</p>
-                <!-- Можно лучше: для спец символов нужно использовать html - мнемоники (https://ru.wikipedia.org/wiki/Мнемоники_в_HTML) -->
             </div>
             <div class="footer__column footer__column_content_info">
                 <h3 class="footer__column-heading">О Практикуме</h3>
@@ -282,72 +252,3 @@
 
 </body>
 </html>
-
-<!--Резюме по работе:
-
-    У вас получилась хорошая работа! Что понравилось:
-
-        - Форматирование кода.
-        - В некоторых местах были выбраны очень хорошие теги для элементов.
-        - В целом, с БЭМ подходом вы справились.
-        - Верстка очень похожа на макет.
-        - Правильно оформлен head
-    
-    Что надо исправить помимо замечаний в коде:
-
-        - нужно навести в проекте порядок:
-            1. все картинки должны быть в одной папке images+
-            2. css-файлы должны быть в папке styles+
-
-        - Для квадрата следует создать свою анимацию, которая будет начинаться в -15deg, потому что анимация не учитывает трансформации, которые были произведены 
-       ранее и при загрузке страницы квадрат делает скачок с -15 до 0, а уже потом начинает крутиться.+
-
-       - По брифу у блока .feinman высота должна быть 790px.+
-
-       - у footer__columns замените height на менее жесткое min-height+
-
-       - В случае, если элемент, содержащий, например, текстовый контент ограничить по высоте - теряется масштабируемость.
-		При редактировании (Добавлении/удалении символов) - нарушается визуальное отображение верстки, она начинает "ломаться".
-        Уберите у feinman__subtitle свойство height.(его и не было)
-        
-        - Вместо ограничения по ширине для footer__column_content_copyright используйте flex-basis: 711px
-        у footer__columns flex-basis уберите
-
-        - половина картинок в cards не отображается, проверьте пути+
-
-        - khan__book-pic не отображается+
-
-        - лого арзамаса и n+1 не отображаются+
-
-        - лого в футере и хедере не отображается+
-
-    Комментарии "можно лучше" носят рекомендательный характер, их выполнение остается на Ваше усмотрение.
-    Комментарии "надо исправить" являются обязательными, только при выполнении всех "надо исправить" работа будет зачтена.
-    Пожалуйста, не удаляйте комментарии до следующей итерации.
-    Для вашего удобства, рекомендую помечать каким-нибудь символом комментарии, которые вы выполнили.
--->
-
-
-
-<!--
-    Не все комментарии были исправлены, исправленные комментарии удаляю, обновленные - в коде:)
-
-    Что надо исправить помимо замечаний в коде:
-
-        - Проверьте перед отправкой, чтобы в архиве была только одна папка с проектом
-
-        - Анимацию для квадрата нужно подправить, она должна описывать полную окружность, и заканчиваться в той же точке, где и началась.
-        Тогда анимация будет плавная, без скачков. У вас анимация начинается в -15, значит закончиться она должна в 345 (-15 + 360 = 345)+
-
-        - половина картинок в cards не отображается, проверьте пути.
-        Приведите их к виду: "/images/interliving.png" -> "images/interliving.png"+
-
-        - khan__book-pic не отображается "/images/book.jpg" -> "images/book.jpg"+
-
-        - лого арзамаса и n+1 не отображаются+
-
-        - лого в футере и хедере не отображается+
-
-        - Вместо padding'а снизу для oakley задайте padding сверху для feinman, тогда ссылка будет на одном уровне с подзаголовком, как того просит бриф.
-        ( padding-top у feinman__title удалите)+
--->

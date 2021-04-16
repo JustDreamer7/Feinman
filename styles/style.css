@@ -1,11 +1,7 @@
 .page {
     min-width: 1100px;
-    /* мы ещё не умеем делать мобильную версию сайта, */
-    /* поэтому выше установлена минимальная ширина страницы */
     max-width: 1600px;
-    /* выше установили ограничение по максимальной ширине */
     margin: 0 auto;
-    /* выше для экранов больше 1600px отцентрировали весь контент */
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }   
 .header {
@@ -17,14 +13,18 @@
     position: relative;
     background-color: #F2F2F2;
     overflow: hidden;
-    /* выше установили ограничения для секции */
 }
 
-.logo{
+.resources__logo{
     width:  270px;
     height: 38px;
+    box-shadow: 0 0 0;
+    transition: box-shadow 1.4s ease;
 }
-.logo-place-header{
+.logo{
+    width: 183px;
+}
+.logo_place_header{
     width: 183px;
     position: absolute;
     top: 30px;
@@ -74,6 +74,14 @@
 }
 @keyframes rotation{
     from{
+        transform: rotate(-15deg);
+    }
+    to{
+        transform: rotate(345deg);
+    }
+}
+@keyframes rotation-triagle{
+    from{
         transform: rotate(0deg);
     }
     to{
@@ -91,7 +99,7 @@
     display: flex;
     justify-content: space-between;
     width:  80%;
-    margin: 100px auto;
+    margin: 100px auto 0;
 }
 .two-columns__brief{
     width: 175px;   
@@ -111,15 +119,9 @@
     line-height: 34px;
     font-size: 24px;
     font-weight: normal; 
-    margin-top: 0; 
-    margin-bottom: 0;  
-}
-.two-columns__paragraph-middle{
-    line-height: 34px;
-    font-size: 24px;
-    font-weight: normal; 
-    margin-top: 30px; 
-    margin-bottom: 30px;  
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 30px;  
 }
 .two-columns__span-accept{
     line-height: 34px;
@@ -130,7 +132,7 @@
     position: relative;
 }
 .section-title{
-    margin: 100px auto 60px;
+    margin: 100px auto 20px;
     width: 60%;
     line-height: 69px;
     font-size: 60px;
@@ -177,27 +179,18 @@
     font-weight: normal;
     margin-top: 20px;
 }
-.section-title_card{
-    margin: 100px auto 20px;
-}
+
 .cards{
-    width: 80%;
-    margin: 0 auto 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-gap: 60px 100px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        width: 920px;
 }
-.cards_middle{
-    justify-content: flex-start;
-    width: 925px;
-}
-.cards__item{
-    width: 240px;
-    margin: 0;
-}
-.cards__item_middle{
-    padding-right: 100px;
+.cards__item {
+        width: 240px;
 }
 .cards__image{
     width: 160px;
@@ -229,19 +222,23 @@
     display: flex;
     justify-content: space-between;
 }
+.video__iframe{
+    width: 515px;
+    height: 316px;
+    border: 0;
+}
 .oakley{
     background-color: #F2F2F2;
     padding-top: 160px;
-    padding-bottom: 80px;
 }
 .feinman{
     position: relative;
-    height: 890px;
+    height: 790px;
     background-color: #F2F2F2;
+    padding-top: 100px;
 }
 .feinman__title{
     margin: 0 auto 70px;
-    padding-top: 100px;
     width: 648px;
     line-height: 1.15;
     font-size: 120px;
@@ -325,9 +322,9 @@
 .khan__book-pic{
     width: 620px;
     height: 608px;
-    background-size: cover;
-    background-image: url(/images_sprint-2/book.jpg);
     margin-right: 20px;
+    object-fit: cover;
+    object-position: top left;  
 }
 .khan__buy-link{
     text-decoration: none;
@@ -346,8 +343,6 @@
 .kaufman{
     position: relative;
     overflow: hidden;
-}
-.kaufman_theme_dark{
     background-color: #1F1F1F;
     color: white;
 }
@@ -380,7 +375,7 @@
     width: 877px;
     height: 877px;
     z-index: 1;
-    animation: rotation 20s linear infinite forwards;
+    animation: rotation-triagle 20s linear infinite forwards;
 }
 .section-title_theme_dark{
     margin: 90px auto 20px;
@@ -393,11 +388,12 @@
 .table__heading_theme_dark{
     margin-top: 0px;
 }
-.logo-zone{
+.resources__logo-zone{
     width: 1100px;
     margin: 80px auto 217px;
     display: flex;
     justify-content: center;
+    list-style-type: none;
 }
 .footer{
     background-color:#1F1F1F;
@@ -406,17 +402,16 @@
 }
 .footer__columns{
     display: flex;
-    flex-basis: 711px;
+    
     width: 90%;
-    height: 350px;
+    min-height: 350px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 60px;
     padding-bottom: 40px;
     justify-content: space-between;
 }
-.logo-place-footer{
-    width: 183px;
+.logo_place_footer{
     height: 35px;
     position: absolute;
     top:0;
@@ -439,7 +434,7 @@
     font-size: 18px;
     font-weight: bold;
 }
-.footer__social-icons{
+.footer__social-icon{
     width: 16px;
     height: 16px;
 }
@@ -459,8 +454,8 @@
     text-decoration: none;
 }
 .footer__column_content_copyright{
-    width: 50%;
     position: relative;
+    flex-basis: 711px;
 }
 
 .link {
@@ -470,10 +465,6 @@
 .link:hover {
     opacity: 0.3;;
 }
-.logo_link{
-    box-shadow: 0 0 0;
-    transition: box-shadow 1.4s ease;
-}
-.logo_link:hover {
+.resources__logo:hover {
     box-shadow: 0 0 5px rgba(0,0,0, 0.5);
 }
